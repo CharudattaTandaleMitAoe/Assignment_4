@@ -8,7 +8,7 @@
 <body>
     <script src="jquery-3.5.1.min.js"></script>
     <script>
-        let base_url = "http://localhost/charudatta/controller.php";
+        let base_url = "controller.php";
 
         function PopulateDropDownListByname(){
           let url = base_url + "?req=name_list";
@@ -18,14 +18,8 @@
 
               for (var i = 0; i < data.length; i++) {
                   var option = document.createElement("OPTION");
-
-                  //Set Name in Text part.
                   option.innerHTML = data[i].name;
-
-                  //Set Id in Value part.
                   option.value = data[i].id;
-
-                  //Add the Option element to DropDownList.
                   ddlCustomersname.options.add(option);
               }
             });
