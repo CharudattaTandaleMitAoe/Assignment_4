@@ -32,14 +32,8 @@
               console.log(data);
               for (var i = 0; i < data.length; i++) {
                   var option = document.createElement("OPTION");
-
-                  //Set Id in Text part.
                   option.innerHTML = data[i].id;
-
-                  //Set Name in Value part.
                   option.value = data[i].name;
-
-                  //Add the Option element to DropDownList.
                   ddlCustomersid.options.add(option);
               }
             });
